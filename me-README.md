@@ -15,4 +15,5 @@ Other people's build : https://docs.rtems.org/releases/rtems-4.10.2/html/started
 3. mkdir /workspace/objdir
 4. cd /workspace/objdir
 5. ./../binutils-gdb/configure
-6. make -j3 (havent test whether success)
+6. make -j3
+7. make install
