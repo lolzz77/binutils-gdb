@@ -1,0 +1,27 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cppdbg",
+            "request": "launch",
+            "name": "GNU debug",
+            "program": "/usr/local/bin/gdb", // objdir is situational, find where the `cc1` is and modify this path
+            "cwd" : "/workspace/objdir",
+            "args": [
+                "${input:pickProgram}"
+            ]
+        },
+    ],
+    "inputs": [
+        {
+          "id": "pickProgram",
+          "description": "Hmm",
+          "type": "pickString",
+          "options": ["/usr/local/bin/gdb"],
+          "default": "/usr/local/bin/gdb"
+        }
+    ]
+}
