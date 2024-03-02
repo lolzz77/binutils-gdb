@@ -8,7 +8,7 @@
             "type": "cppdbg",
             "request": "launch",
             "name": "GNU debug",
-            "program": "/usr/local/bin/gdb", // objdir is situational, find where the `cc1` is and modify this path
+            "program": "/usr/local/bin/gdb",
             "cwd" : "/workspace/objdir",
             "args": [
                 "${input:pickProgram}"

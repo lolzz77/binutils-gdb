@@ -21,7 +21,7 @@
 #include "interps.h"
 #include "run-on-main-thread.h"
 
-int
+int // gdb main function, how i found out, run gdb, then type `b main`, it will say it is from this file
 main (int argc, char **argv)
 {
   /* The first call to is_main_thread () should be from the main thread.
