@@ -391,7 +391,7 @@ start_event_loop ()
   /* Loop until there is nothing to do.  This is the entry point to
      the event loop engine.  gdb_do_one_event will process one event
      for each invocation.  It blocks waiting for an event and then
-     processes it.  */
+     processes it.  */ // here is the loop, when you type something in gdb, here will process
   while (1)
     {
       int result = 0;
@@ -771,7 +771,7 @@ captured_main_1 (struct captured_main_args *context)
        So use this temporary int that we write back after argument parsing.  */
     int write_files_1 = 0;
     static struct option long_options[] =
-    {
+    { // list of options?
       {"tui", no_argument, 0, OPT_TUI},
       {"readnow", no_argument, NULL, OPT_READNOW},
       {"readnever", no_argument, NULL, OPT_READNEVER},
@@ -1157,7 +1157,7 @@ captured_main_1 (struct captured_main_args *context)
     {
       /* Print all the junk at the top, with trailing "..." if we are
 	 about to read a symbol file (possibly slowly).  */
-      print_gdb_version (gdb_stdout, true);
+      print_gdb_version (gdb_stdout, true); // print on console
       if (symarg)
 	gdb_printf ("..");
       gdb_printf ("\n");
@@ -1215,7 +1215,7 @@ captured_main_1 (struct captured_main_args *context)
       ret = catch_command_errors (exec_file_attach, execarg,
 				  !batch_flag);
       if (ret != 0)
-	ret = catch_command_errors (symbol_file_add_main_adapter,
+	ret = catch_command_errors (symbol_file_add_main_adapter, // after this line, will print 'reading symbols from [executable]...
 				    symarg, !batch_flag);
     }
   else
