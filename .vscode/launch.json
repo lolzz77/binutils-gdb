@@ -17,11 +17,14 @@
     ],
     "inputs": [
         {
-          "id": "pickProgram",
-          "description": "Hmm",
-          "type": "pickString",
-          "options": ["/usr/local/bin/gdb"],
-          "default": "/usr/local/bin/gdb"
+            "id": "pickProgram",
+            "description": "Hmm",
+            "type": "pickString",
+            "options": [
+                "/usr/local/bin/gdb",
+                "/workspace/test/myprogram"
+            ],
+            "default": "/usr/local/bin/gdb"
         }
     ]
 }

@@ -4708,7 +4708,7 @@ fetch_inferior_event ()
 	      {
 		/* We may not find an inferior if this was a process exit.  */
 		if (inf == nullptr || inf->control.stop_soon == NO_STOP_QUIETLY)
-		  proceeded = normal_stop ();
+		  proceeded = normal_stop (); // MEE breakpoint, here handles breakpoints
 	      }
 
 	    if (!proceeded)
@@ -4759,7 +4759,7 @@ fetch_inferior_event ()
   /* If a UI was in sync execution mode, and now isn't, restore its
      prompt (a synchronous execution command has finished, and we're
      ready for input).  */
-  all_uis_check_sync_execution_done ();
+  all_uis_check_sync_execution_done (); // restore the '(gdb)' prompt
 
   if (cmd_done
       && exec_done_display_p

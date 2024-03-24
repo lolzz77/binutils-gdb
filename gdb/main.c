@@ -504,7 +504,7 @@ catch_command_errors (catch_command_errors_const_ftype command,
     {
       int was_sync = current_ui->prompt_state == PROMPT_BLOCKED;
 
-      command (arg, from_tty);
+      command (arg, from_tty); // after this line, it will print Reading symbols from ...
 
       maybe_wait_sync_command_done (was_sync);
 
