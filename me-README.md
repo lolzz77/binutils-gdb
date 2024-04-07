@@ -12,7 +12,12 @@ Other people's build : https://docs.rtems.org/releases/rtems-4.10.2/html/started
 This is written at verion `15.0.50.DATE-git`
 Find the version at `/workspace/binutils-gdb/gdb/version.in`
 
-1. apt-get update
+All code:
+```bash
+cd /workspace; apt-get update -y; apt-get install libmpc-dev texinfo bison flex -y; mkdir /workspace/objdir; cd /workspace/objdir; ./../binutils-gdb/configure; make -j3; make install -j3
+```
+
+1. apt-get update -y
 - Required, else you might fail install the `texinfo`
 2. apt-get install libmpc-dev texinfo bison flex -y
 - they are pre-requisite of GDB
