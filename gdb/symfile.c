@@ -1078,7 +1078,7 @@ symbol_file_add_with_addrs (const gdb_bfd_ref_ptr &abfd, const char *name,
       if (deprecated_pre_add_symbol_hook)
 	deprecated_pre_add_symbol_hook (name);
       else
-	gdb_printf (_("Reading symbols from %ps...\n"),
+	gdb_printf (_("Reading symbols from %ps...\n"), // here prints reading symbols from...
 		    styled_string (file_name_style.style (), name));
     }
   syms_from_objfile (objfile, addrs, add_flags);
@@ -1192,7 +1192,7 @@ symbol_file_add_main_1 (const char *args, symfile_add_flags add_flags,
 {
   add_flags |= current_inferior ()->symfile_flags | SYMFILE_MAINLINE;
 
-  struct objfile *objfile = symbol_file_add (args, add_flags, NULL, flags);
+  struct objfile *objfile = symbol_file_add (args, add_flags, NULL, flags); // after this line, it will print reading symbols from...
   if (reloff != 0)
     objfile_rebase (objfile, reloff);
 

@@ -586,7 +586,7 @@ gdb_wait_for_event (int block)
 {
   file_handler *file_ptr;
   int num_found = 0;
-
+  // hmmm, flushing input?
   /* Make sure all output is done before getting another event.  */
   flush_streams ();
 

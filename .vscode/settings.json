@@ -1,0 +1,11 @@
+{
+    "favorites.resources": [
+        {
+            "filePath": "gdb/gdb.c",
+            "group": "Default"
+        }
+    ],
+    "files.associations": {
+        "complex": "c"
+    }
+}

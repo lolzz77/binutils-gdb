@@ -67,7 +67,7 @@ display_mi_prompt (struct mi_interp *mi)
 {
   struct ui *ui = current_ui;
 
-  gdb_puts ("(gdb) \n", mi->raw_stdout);
+  gdb_puts ("(gdb) \n", mi->raw_stdout); // here prints the gdb prompt
   gdb_flush (mi->raw_stdout);
   ui->prompt_state = PROMPTED;
 }

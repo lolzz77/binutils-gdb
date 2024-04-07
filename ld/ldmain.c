@@ -248,7 +248,7 @@ ld_bfd_error_handler (const char *fmt, va_list ap)
 
 int
 main (int argc, char **argv)
-{
+{ // ld linker main entry
   char *emulation;
   long start_time = get_run_time ();
 
