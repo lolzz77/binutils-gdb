@@ -10,6 +10,7 @@
             "name": "GNU debug",
             "program": "/usr/local/bin/gdb",
             "cwd" : "/workspace/objdir",
+            "stopAtEntry": true,
             "args": [
                 "${input:pickProgram}"
             ]
